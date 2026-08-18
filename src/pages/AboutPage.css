@@ -1,0 +1,383 @@
+.about-page-wrapper {
+  padding: 60px 20px 100px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.about-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-home-wrapper {
+  margin-bottom: 20px;
+}
+
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.back-home-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.about-section-block,
+.vision-section-block,
+.team-section-block,
+.promise-section-block {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* Who We Are Styles */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.about-lead {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.about-features-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.feature-pill {
+  padding: 8px 16px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.about-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.animated-card-glass {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(23, 37, 42, 0.08);
+  text-align: center;
+}
+
+.pulsing-orb {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: var(--primary);
+  opacity: 0.15;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.visual-icon-box {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.floating-icon {
+  font-size: 2rem;
+}
+
+.animated-card-glass h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.animated-card-glass p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Vision Styles */
+.vision-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.vision-left-col h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.vision-lead {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+.vision-glass-box {
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.vision-glass-box p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 25px;
+}
+
+.vision-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vision-tags span {
+  padding: 6px 12px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Team Styles */
+.team-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.team-intro-col h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.team-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.team-highlight-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px 25px;
+  border-radius: 16px;
+}
+
+.highlight-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.highlight-text {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.team-steps-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-card-modern {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 25px;
+  border-radius: 18px;
+}
+
+.step-num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0.5;
+  background-color: var(--bg-color);
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.step-card-modern h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.step-card-modern p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* Promise Styles */
+.promise-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.promise-header h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.promise-intro {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.promise-glass-card {
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 40px 30px;
+}
+
+.card-top-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.card-icon-box {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.promise-glass-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.promise-glass-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.about-cta-footer {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.about-page-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #FFFFFF;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(58, 175, 169, 0.3);
+}
+
+@media screen and (max-width: 900px) {
+  .about-grid,
+  .vision-split-container,
+  .team-split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

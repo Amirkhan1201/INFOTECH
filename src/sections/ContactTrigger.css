@@ -1,0 +1,73 @@
+.home-contact-trigger-section {
+  padding: 100px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-trigger-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 60px 40px;
+  box-shadow: 0 15px 35px rgba(23, 37, 42, 0.05);
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.home-trigger-container h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  letter-spacing: -0.5px;
+}
+
+.home-trigger-container p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.open-contact-page-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #FFFFFF;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(58, 175, 169, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.open-contact-page-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(58, 175, 169, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .home-trigger-container {
+    padding: 40px 20px;
+  }
+  .home-trigger-container h2 {
+    font-size: 1.8rem;
+  }
+}

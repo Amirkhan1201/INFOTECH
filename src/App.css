@@ -1,0 +1,32 @@
+:root {
+  --bg-color: #FFFFFF;
+  --text-color: #17252A;
+  --nav-bg: #FFFFFF;
+  --card-bg: #FAFAFA;
+  --primary: #2B7A78;
+  --accent: #3AAFA9;
+  --border-color: #DEF2F1;
+}
+
+[data-theme='dark'] {
+  --bg-color: #17252A;
+  --text-color: #DEF2F1;
+  --nav-bg: #1B2A30;
+  --card-bg: #22343B;
+  --primary: #3AAFA9;
+  --accent: #2B7A78;
+  --border-color: #2B7A78;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

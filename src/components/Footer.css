@@ -1,0 +1,129 @@
+.site-footer {
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 80px 20px 30px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.footer-bio {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.footer-contact-info p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.footer-contact-info a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-contact-info a:hover {
+  color: var(--primary);
+}
+
+.footer-links-col h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-col li {
+  margin-bottom: 12px;
+}
+
+.footer-links-col a {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.footer-links-col a:hover {
+  opacity: 1;
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.footer-policy-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-policy-links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-policy-links a:hover {
+  color: var(--primary);
+}
+
+@media screen and (max-width: 900px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
