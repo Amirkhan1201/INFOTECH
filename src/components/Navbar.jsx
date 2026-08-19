@@ -34,6 +34,7 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Desktop / Mobile Menu Links */}
         <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
           
           {/* Home Link */}
@@ -86,27 +87,33 @@ export default function Navbar() {
             )}
           </li>
           
-          {/* Mobile Action Buttons Bar (Contact + Theme) */}
-          <div className="mobile-action-bar">
-            <li>
-              <Link to="/contact" className="contact-btn" onClick={() => setMobileMenuOpen(false)}>
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <button className="theme-toggle-btn" onClick={toggleTheme}>
-                {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-              </button>
-            </li>
-          </div>
+          {/* Contact Us Link (Mobile Drawer la full width irukum) */}
+          <li className="mobile-contact-li">
+            <Link to="/contact" className="contact-btn" onClick={() => setMobileMenuOpen(false)}>
+              Contact Us
+            </Link>
+          </li>
+
+          {/* Desktop Theme Toggle Button */}
+          <li className="desktop-theme-li">
+            <button className="theme-toggle-btn" onClick={toggleTheme}>
+              {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+            </button>
+          </li>
         </ul>
 
-        {/* Mobile Hamburger Icon */}
-        <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          <span className={`bar ${mobileMenuOpen ? 'open' : ''}`}></span>
-          <span className={`bar ${mobileMenuOpen ? 'open' : ''}`}></span>
-          <span className={`bar ${mobileMenuOpen ? 'open' : ''}`}></span>
+        {/* Right side controls for Mobile (Theme Icon + Hamburger) */}
+        <div className="mobile-nav-right">
+          <button className="theme-toggle-btn mobile-icon-theme" onClick={toggleTheme}>
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+          <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <span className={`bar ${mobileMenuOpen ? 'open' : ''}`}></span>
+            <span className={`bar ${mobileMenuOpen ? 'open' : ''}`}></span>
+            <span className={`bar ${mobileMenuOpen ? 'open' : ''}`}></span>
+          </div>
         </div>
+
       </div>
     </nav>
   );
