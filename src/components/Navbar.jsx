@@ -28,7 +28,7 @@ export default function Navbar() {
         
         {/* Logo and Company Name together */}
         <div className="navbar-brand">
-          <Link to="/">
+          <Link to="/" onClick={() => setMobileMenuOpen(false)}>
             <img src="/logo.png" alt="Emesqube Logo" className="brand-logo" />
             <span className="brand-title">EMESQUBE TECHNOLOGIES</span>
           </Link>
@@ -86,19 +86,19 @@ export default function Navbar() {
             )}
           </li>
           
-          {/* Contact Us Link */}
-          <li>
-            <Link to="/contact" className="contact-btn" onClick={() => setMobileMenuOpen(false)}>
-              Contact Us
-            </Link>
-          </li>
-
-          {/* Theme Switcher Button */}
-          <li>
-            <button className="theme-toggle-btn" onClick={toggleTheme}>
-              {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-            </button>
-          </li>
+          {/* Mobile Action Buttons Bar (Contact + Theme) */}
+          <div className="mobile-action-bar">
+            <li>
+              <Link to="/contact" className="contact-btn" onClick={() => setMobileMenuOpen(false)}>
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <button className="theme-toggle-btn" onClick={toggleTheme}>
+                {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+              </button>
+            </li>
+          </div>
         </ul>
 
         {/* Mobile Hamburger Icon */}
