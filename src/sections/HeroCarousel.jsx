@@ -1,49 +1,42 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './HeroCarousel.css';
 
 const slidesData = [
   {
-    id: 'web-mobile-apps',
-    title: "Empower Your Digital Growth",
-    subtitle: "We build high-performance Web and Mobile Applications tailored for your business success.",
-    cta: "Explore Services",
-    bgGradient: "linear-gradient(135deg, #2B7A78 0%, #17252A 100%)",
+    id: 'publishing-workflows',
+    title: "Publishing Workflow Expertise",
+    subtitle: "Supporting book and journal publishing workflows with quality-focused production and technology-driven processes.",
+    cta: "Explore Approach",
+    bgGradient: "linear-gradient(135deg, #1B3B6F 0%, #061A40 100%)",
   },
   {
-    id: 'app-development',
-    title: "Innovative App Development",
-    subtitle: "Transforming your ideas into sleek, scalable, and user-friendly iOS & Android apps.",
-    cta: "Get Started",
-    bgGradient: "linear-gradient(135deg, #3AAFA9 0%, #2B7A78 100%)",
+    id: 'xml-ebook-conversion',
+    title: "XML & eBook Conversion",
+    subtitle: "Delivering accurate, scalable, and cost-effective digital content solutions tailored to modern publishing demands.",
+    cta: "View Services",
+    bgGradient: "linear-gradient(135deg, #218380 0%, #1B3B6F 100%)",
   },
   {
-    id: 'web-solutions',
-    title: "Next-Gen Web Solutions",
-    subtitle: "Modern, lightning-fast, and responsive websites built using the latest React ecosystem.",
-    cta: "View Portfolio",
-    bgGradient: "linear-gradient(135deg, #17252A 0%, #22343B 100%)",
-  },
-  {
-    id: 'digital-marketing',
-    title: "Digital Marketing & Growth",
-    subtitle: "Scale your brand reach, maximize conversions, and dominate search engine rankings.",
-    cta: "Boost Growth",
-    bgGradient: "linear-gradient(135deg, #2B7A78 0%, #3AAFA9 100%)",
-  },
-  {
-    id: 'epublishing',
-    title: "Professional ePublishing Services",
-    subtitle: "Seamless digital publishing, accurate typesetting, and formatting solutions for publishers.",
+    id: 'document-transformation',
+    title: "Digital & Document Transformation",
+    subtitle: "Combining skilled professionals and structured workflows for seamless document and content transformation.",
     cta: "Learn More",
-    bgGradient: "linear-gradient(135deg, #22343B 0%, #17252A 100%)",
+    bgGradient: "linear-gradient(135deg, #061A40 0%, #122230 100%)",
   },
   {
-    id: 'medical-localization',
-    title: "Medical Coding & Localization",
-    subtitle: "Accurate translation, localization, and medical transcription services you can trust.",
-    cta: "Contact Us",
-    bgGradient: "linear-gradient(135deg, #3AAFA9 0%, #17252A 100%)",
+    id: 'quality-delivery',
+    title: "Quality-Focused Production",
+    subtitle: "Maintaining consistent quality throughout the production cycle with experienced production teams.",
+    cta: "Our Strengths",
+    bgGradient: "linear-gradient(135deg, #218380 0%, #48A9A6 100%)",
+  },
+  {
+    id: 'scalable-support',
+    title: "Flexible & Scalable Support",
+    subtitle: "Technology-enabled content solutions designed to adapt to your project timelines and requirements.",
+    cta: "Get Started",
+    bgGradient: "linear-gradient(135deg, #122230 0%, #061A40 100%)",
   }
 ];
 
@@ -74,7 +67,7 @@ export default function HeroCarousel() {
           style={{ background: slide.bgGradient }}
         >
           <div className="carousel-content">
-            <span className="slide-badge">MS INFOTECH SOLUTIONS</span>
+            <span className="slide-badge">EMESQUBE TECHNOLOGIES</span>
             <h1>{slide.title}</h1>
             <p>{slide.subtitle}</p>
             <div className="carousel-btns">

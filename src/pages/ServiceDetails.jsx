@@ -1,63 +1,82 @@
-
 import { useParams, Link } from 'react-router-dom';
 import './ServiceDetails.css';
 
 const servicesContent = {
-  'app-dev': {
-    title: "App Development",
-    subtitle: "Transforming your ideas into sleek, scalable, and user-friendly iOS & Android apps.",
-    category: "MOBILE SOLUTIONS",
-    description: "We build high-performance mobile applications tailored for your business success with modern UI/UX, push notifications, and robust backend integrations.",
-    features: ["iOS & Android Cross-Platform Apps", "Sleek & Intuitive UI/UX Design", "Secure API Integrations", "App Store Optimization Support"]
+  'epublishing-digital': {
+    title: "ePublishing & Digital Publishing",
+    subtitle: "Comprehensive digital content transformation and professional multi-format publishing solutions.",
+    category: "PUBLISHING SOLUTIONS",
+    description: "We deliver world-class ePublishing and digital publishing production services, transforming manuscript data into industry-standard digital formats with high precision and structural accuracy.",
+    features: [
+      "XML Conversion",
+      "ePub Conversion",
+      "PDF to XML & Word to XML",
+      "PDF to ePub & Word to ePub",
+      "InDesign to ePub"
+    ]
   },
-  'web-dev': {
-    title: "Web Development",
-    subtitle: "Modern, lightning-fast, and responsive websites built using the latest React ecosystem.",
-    category: "WEB DEVELOPMENT",
-    description: "Leveraging React, Vite, and modern CSS frameworks, we craft responsive websites with advanced animations, glassmorphism, and high-speed performance.",
-    features: ["React & Vite Ecosystem", "Fully Responsive Layouts", "SEO Optimized Architecture", "Clean & Scalable Codebase"]
+  'ebook-conversion': {
+    title: "eBook Conversion",
+    subtitle: "Advanced reflowable, fixed-layout, and interactive eBook creation for all digital readers.",
+    category: "DIGITAL CONTENT",
+    description: "Specialized eBook conversion services tailored for educational, children's, and trade publishers, featuring interactive components and responsive rendering across devices.",
+    features: [
+      "Reflowable eBook Conversion",
+      "Fixed-layout eBook Conversion",
+      "Interactive eBooks with Fill-in-the-Blanks",
+      "Drag-and-Drop & Score Validation",
+      "Checkboxes and Radio Buttons Integration"
+    ]
+  },
+  'editorial-production': {
+    title: "Editorial & Production Services",
+    subtitle: "End-to-end editorial support, meticulous proofreading, and typesetting excellence.",
+    category: "PRODUCTION WORKFLOWS",
+    description: "Maintaining strict quality and typographic accuracy throughout your production lifecycle with experienced editors, proofreaders, and composition specialists.",
+    features: [
+      "Professional Proofreading",
+      "In-depth Copy Editing",
+      "Precise Typesetting",
+      "Book & Journal Composition",
+      "Digital Books & Content Solutions"
+    ]
+  },
+  'web-technology': {
+    title: "Web & Technology Services",
+    subtitle: "Robust HTML conversion, legacy migration, and custom web development solutions.",
+    category: "TECHNOLOGY SOLUTIONS",
+    description: "Bridging the gap between legacy formats and modern web standards with advanced conversion technologies and responsive web architectures.",
+    features: [
+      "HTML Conversion",
+      "Flash to HTML5 Conversion",
+      "Word Conversion Workflows",
+      "Universal PDF Conversion",
+      "Custom Web Development"
+    ]
   },
   'digital-marketing': {
     title: "Digital Marketing",
-    subtitle: "Scale your brand reach, maximize conversions, and dominate search engine rankings.",
+    subtitle: "Strategic growth campaigns designed to enhance online brand presence and discoverability.",
     category: "MARKETING & GROWTH",
-    description: "Drive targeted traffic and increase your ROI with data-driven digital marketing strategies, SEO, social media branding, and performance campaigns.",
-    features: ["Search Engine Optimization (SEO)", "Social Media Branding & Strategy", "Conversion Rate Optimization", "Targeted Growth Campaigns"]
+    description: "Empowering businesses to scale their digital reach, optimize search engine placement, and amplify content visibility across digital channels.",
+    features: [
+      "Online Presence Optimization",
+      "Content Visibility & SEO Support",
+      "Customer Reach Strategies",
+      "Targeted Growth Campaigns"
+    ]
   },
-  'epublishing': {
-    title: "ePublishing",
-    subtitle: "Seamless digital publishing and formatting solutions tailored for global publishers.",
-    category: "PUBLISHING SOLUTIONS",
-    description: "Delivering a gamut of professional ePublishing solutions including XML/ePub conversions, layout formatting, and multi-format content distribution.",
-    features: ["ePub2 / ePub3 & XML Conversion", "Rigorous Quality Assurance", "Global Publishing Standards", "Fast Execution & Turnaround"]
-  },
-  'digital-pub': {
-    title: "Digital Publishing",
-    subtitle: "Innovative and engaging ways to design and broadcast content across media.",
-    category: "DIGITAL MEDIA",
-    description: "Empowering global publishers to transform the way they publish content across traditional and emerging digital channels.",
-    features: ["Multi-Device Content Adaptation", "Interactive Digital Publications", "Engaging Broadcast Workflows", "Next-Gen Tech Integration"]
-  },
-  'typesetting': {
-    title: "Type Setting",
-    subtitle: "Professional typesetting and layout design adhering to international standards.",
-    category: "PUBLISHING SERVICES",
-    description: "Precise typesetting and composition services for books, journals, and magazines, maintaining strict typographic accuracy and visual appeal.",
-    features: ["Book & Journal Composition", "Strict Typographic Standards", "Multi-lingual Support", "High-Precision Proofing"]
-  },
-  'translation': {
-    title: "Translation & Localisation",
-    subtitle: "Accurate translation and localisation services to connect with global audiences.",
-    category: "GLOBAL SERVICES",
-    description: "Breaking language barriers with precise translation and localisation services tailored to regional nuances, ensuring clear and engaging communication.",
-    features: ["Multi-language Translation", "Cultural Localisation", "Contextual Accuracy", "Fast Turnaround Times"]
-  },
-  'medical': {
-    title: "Medical Coding & Transcription",
-    subtitle: "Accurate medical coding, transcription, and healthcare documentation services.",
+  'medical-content': {
+    title: "Medical Content Services",
+    subtitle: "Accurate healthcare documentation, transcription, and precise medical coding support.",
     category: "HEALTHCARE SOLUTIONS",
-    description: "Providing precision-driven medical coding and transcription services with strict confidentiality, accuracy, and compliance with industry regulations.",
-    features: ["Accurate Medical Coding", "Reliable Transcription Services", "Strict Data Confidentiality", "Compliance & Quality Checks"]
+    description: "Delivering secure, confidential, and compliant medical content services managed by skilled professionals trained in healthcare industry standards.",
+    features: [
+      "Accurate Medical Coding",
+      "Reliable Medical Transcription",
+      "Scribing-Related Content Services",
+      "Strict Confidentiality & Compliance"
+    ]
   }
 };
 
@@ -66,7 +85,7 @@ export default function ServiceDetails() {
   const service = servicesContent[serviceId] || {
     title: "Professional Services",
     subtitle: "Explore our wide gamut of technology and publishing solutions.",
-    category: "M S INFOTECH",
+    category: "EMESQUBE TECHNOLOGIES",
     description: "We deliver world-class digital and publishing solutions tailored to your business needs with maximum efficiency.",
     features: ["Global Quality Standards", "Experienced Professionals", "24/7 Support", "Cost-Effective Pricing"]
   };

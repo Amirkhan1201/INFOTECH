@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ContactPage.css';
 
@@ -21,27 +21,34 @@ export default function ContactPage() {
         
         {/* Back to Home Button */}
         <div className="back-home-wrapper">
-          <Link to="/" className="back-home-btn">← Back to Home</Link>
+          <Link to="/" className="back-home-btn"><span>←</span> Back to Home</Link>
         </div>
 
+        {/* Header Section */}
         <div className="contact-header">
-          <span className="section-badge">📬 GET IN TOUCH</span>
-          <h2>Let's Connect With Us</h2>
-          <p>Reach out to our team to discover how our professional publishing solutions can help you.</p>
+          <span className="section-badge">📬 LET'S WORK TOGETHER</span>
+          <h2>Connect With Emesqube Technologies</h2>
+          <p>
+            Looking for a reliable partner for ePublishing, XML, ePub, content conversion, copy editing, typesetting, digital marketing or technology solutions? We are ready to support your next project.
+          </p>
         </div>
 
         <div className="contact-grid">
           
           {/* Left Side: Contact Information */}
           <div className="contact-info-card">
-            <h3>M S INFOTECH</h3>
-            <p className="company-subtitle">Professional Publishing & Tech Solutions</p>
+            <h3>EMESQUBE TECHNOLOGIES</h3>
+            <p className="company-subtitle">Turning Content into Digital Possibilities</p>
             
             <div className="info-item">
               <span className="info-icon">📍</span>
               <div>
                 <h4>Address</h4>
-                <p>No.23, VNP Nagar,<br />Kollidam, Tamil Nadu, India.</p>
+                <p>
+                  No.243 V.N.P. Nagar, Kollidam Main Road,<br />
+                  (T.K), Mayiladuthurai (D.T), Kollidam (P.O),<br />
+                  Tamil Nadu, India – 609101.
+                </p>
               </div>
             </div>
 
@@ -49,7 +56,7 @@ export default function ContactPage() {
               <span className="info-icon">✉️</span>
               <div>
                 <h4>E-mail</h4>
-                <p><a href="mailto:msinfotech222@gmail.com">msinfotech222@gmail.com</a></p>
+                <p><a href="mailto:emesqube@gmail.com">emesqube@gmail.com</a></p>
               </div>
             </div>
 
@@ -57,7 +64,7 @@ export default function ContactPage() {
               <span className="info-icon">📞</span>
               <div>
                 <h4>Mobile</h4>
-                <p><a href="tel:+919566500888">+91- 9566500888</a></p>
+                <p><a href="tel:+919566500888">+91-9566500888</a></p>
               </div>
             </div>
           </div>
@@ -75,7 +82,7 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="contact-form">
-                <h3>Submit Let's Connect Form</h3>
+                <h3>Send Us a Message</h3>
                 
                 <div className="form-group">
                   <label htmlFor="name">Your Name</label>
@@ -111,12 +118,12 @@ export default function ContactPage() {
                     rows="4" 
                     value={formData.message} 
                     onChange={handleChange} 
-                    placeholder="Type your message here..." 
+                    placeholder="Tell us about your project requirements..." 
                     required 
                   ></textarea>
                 </div>
 
-                <button type="submit" className="submit-id-btn">Send Message</button>
+                <button type="submit" className="submit-id-btn">Send Message 🚀</button>
               </form>
             )}
           </div>

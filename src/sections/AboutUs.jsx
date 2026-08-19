@@ -9,7 +9,7 @@ export default function AboutUs() {
         {/* Left Side: Content */}
         <div className="about-content">
           <span className="section-badge">WHO WE ARE</span>
-          <h2>Innovating Content & Digital Publishing Since 2009</h2>
+          <h2>Innovating Content & Digital Publishing Since 200933</h2>
           <p className="about-lead">
             M S Infotech offers a gamut of professional publishing solutions to clients around the globe. Our strength lies in an innovative business approach, execution skills, and quick adaptability to emerging technologies.
           </p>

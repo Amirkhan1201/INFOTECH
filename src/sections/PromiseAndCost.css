@@ -7,7 +7,11 @@
   overflow: hidden;
 }
 
-/* Common Badge Styling */
+
+/* ==========================================
+   COMMON BADGE STYLING
+========================================== */
+
 .section-badge {
   display: inline-block;
   padding: 6px 16px;
@@ -36,218 +40,778 @@
   color: #DEF2F1;
 }
 
-/* Promise Section */
-.promise-section {
+
+/* ==========================================
+   TEAM & QUALITY SECTION
+========================================== */
+
+.team-quality-section {
   padding: 100px 20px;
 }
 
-.promise-container {
+.team-quality-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.promise-header {
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.team-quality-header {
   text-align: center;
-  margin-bottom: 60px;
+  max-width: 900px;
+  margin: 0 auto 70px;
 }
 
-.promise-header h2 {
-  font-size: 2.6rem;
+.team-quality-header h2 {
+  font-size: 2.7rem;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   color: var(--text-color);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
 }
 
-.promise-intro {
-  font-size: 1.1rem;
-  opacity: 0.85;
-  max-width: 700px;
+.team-quality-intro {
+  font-size: 1.08rem;
+  opacity: 0.82;
+  max-width: 850px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
-/* Glass Cards Grid */
-.promise-grid {
+
+/* ==========================================
+   QUALITY FOCUS
+========================================== */
+
+.quality-focus-wrapper {
+  margin-bottom: 90px;
+}
+
+.quality-section-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.mini-label {
+  display: block;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.quality-section-heading h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.quality-section-heading p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+
+/* ==========================================
+   QUALITY CARDS
+========================================== */
+
+.quality-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.promise-glass-card {
+.quality-card {
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 28px 25px;
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 24px;
-  padding: 45px 35px;
+  border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
-  box-shadow: 0 10px 30px rgba(23, 37, 42, 0.04);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.3s ease;
 }
 
-.card-top-glow {
+.quality-card::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  opacity: 0.8;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--accent)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.promise-glass-card:hover {
-  transform: translateY(-8px);
+.quality-card:hover {
+  transform: translateY(-6px);
   border-color: var(--primary);
-  box-shadow: 0 20px 45px rgba(43, 122, 120, 0.15);
+  box-shadow: 0 18px 40px rgba(43, 122, 120, 0.12);
 }
 
-.card-icon-box {
-  width: 65px;
-  height: 65px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  border-radius: 18px;
+.quality-card:hover::before {
+  opacity: 1;
+}
+
+.quality-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 20px rgba(43, 122, 120, 0.25);
-  transform: rotate(-3deg);
-  transition: transform 0.3s ease;
-}
-
-.promise-glass-card:hover .card-icon-box {
-  transform: rotate(0deg) scale(1.1);
-}
-
-.promise-glass-card h3 {
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+  );
   font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 14px;
+  box-shadow: 0 7px 18px rgba(43, 122, 120, 0.2);
+}
+
+.quality-card-content {
+  flex: 1;
+}
+
+.quality-card h4 {
+  font-size: 1.05rem;
+  font-weight: 750;
+  margin: 2px 0 8px;
   color: var(--text-color);
 }
 
-.promise-glass-card p {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  opacity: 0.8;
+.quality-card p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin: 0;
+  opacity: 0.72;
 }
 
-/* Cost Competitive Banner Section */
-.cost-section {
-  padding: 0 20px 100px 20px;
-}
 
-.cost-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* ==========================================
+   SCALABLE PRODUCTION
+========================================== */
 
-.cost-hero-banner {
+.scalable-production {
   position: relative;
-  background: linear-gradient(135deg, #17252A 0%, #2B7A78 100%);
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr;
+  align-items: center;
+  gap: 50px;
+  padding: 65px 60px;
   border-radius: 28px;
-  padding: 70px 50px;
-  text-align: center;
-  color: #FFFFFF;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(23, 37, 42, 0.2);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(43, 122, 120, 0.08),
+      rgba(58, 175, 169, 0.04)
+    );
+
+  border: 1px solid var(--border-color);
 }
 
-.cost-banner-glow {
+.scalable-production::before {
+  content: '';
   position: absolute;
-  top: -100px;
+  top: -150px;
   right: -100px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(58, 175, 169, 0.4) 0%, transparent 70%);
+  width: 350px;
+  height: 350px;
+
+  background: radial-gradient(
+    circle,
+    rgba(58, 175, 169, 0.16) 0%,
+    transparent 70%
+  );
+
   border-radius: 50%;
   pointer-events: none;
 }
 
-.cost-content {
+.scalable-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-.cost-hero-banner h2 {
-  font-size: 2.8rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
+.scalable-content h3 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  color: var(--text-color);
 }
 
-.cost-lead {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #DEF2F1;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.cost-desc {
+.scalable-content p {
   font-size: 1rem;
-  opacity: 0.9;
-  margin-bottom: 35px;
-  line-height: 1.7;
+  line-height: 1.8;
+  opacity: 0.78;
+  max-width: 700px;
+  margin-bottom: 25px;
 }
 
-.cost-btn-group {
+
+/* ==========================================
+   COMPLEXITY TAGS
+========================================== */
+
+.complexity-tags {
   display: flex;
-  gap: 15px;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-.btn-woo-primary {
-  background-color: #3AAFA9;
+.complexity-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 30px;
+
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+
+  color: var(--text-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.complexity-tags span:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
   color: #FFFFFF;
-  padding: 14px 32px;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 8px 25px rgba(58, 175, 169, 0.4);
-}
-
-.btn-woo-primary:hover {
-  background-color: #DEF2F1;
-  color: #17252A;
   transform: translateY(-2px);
 }
 
-.btn-woo-secondary {
-  background-color: transparent;
+
+/* ==========================================
+   SCALABLE VISUAL
+========================================== */
+
+.scalable-visual {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-orbit {
+  position: absolute;
+  border: 1px solid rgba(43, 122, 120, 0.3);
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 190px;
+  height: 190px;
+  animation: rotateOrbit 12s linear infinite;
+}
+
+.orbit-two {
+  width: 135px;
+  height: 135px;
+  border-style: dashed;
+  animation: rotateOrbitReverse 9s linear infinite;
+}
+
+.visual-center {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+  );
+
   color: #FFFFFF;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  padding: 14px 32px;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.2s ease;
+
+  box-shadow:
+    0 15px 35px rgba(43, 122, 120, 0.25);
+
+  z-index: 2;
 }
 
-.btn-woo-secondary:hover {
-  border-color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+.visual-center span {
+  font-size: 1.5rem;
+  margin-bottom: 3px;
 }
 
-/* Responsive Design */
+.visual-center strong {
+  font-size: 0.85rem;
+}
+
+.visual-center small {
+  font-size: 0.68rem;
+  opacity: 0.85;
+}
+
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateOrbitReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* ==========================================
+   WHY EMESQUBE SECTION
+========================================== */
+
+.why-emesqube-section {
+  padding: 0 20px 100px;
+}
+
+.why-emesqube-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  position: relative;
+
+  background: linear-gradient(
+    135deg,
+    #17252A 0%,
+    #2B7A78 100%
+  );
+
+  border-radius: 30px;
+  padding: 75px 55px;
+
+  overflow: hidden;
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 25px 60px rgba(23, 37, 42, 0.2);
+}
+
+.why-emesqube-container::before {
+  content: '';
+  position: absolute;
+  top: -180px;
+  right: -120px;
+
+  width: 400px;
+  height: 400px;
+
+  background: radial-gradient(
+    circle,
+    rgba(58, 175, 169, 0.35) 0%,
+    transparent 70%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.why-emesqube-container::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: -150px;
+
+  width: 400px;
+  height: 400px;
+
+  background: radial-gradient(
+    circle,
+    rgba(58, 175, 169, 0.18) 0%,
+    transparent 70%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+/* ==========================================
+   WHY HEADER
+========================================== */
+
+.why-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 55px;
+}
+
+.why-header h2 {
+  font-size: 2.7rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.why-header p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #DEF2F1;
+  opacity: 0.9;
+}
+
+
+/* ==========================================
+   REASONS GRID
+========================================== */
+
+.reasons-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.reason-card {
+  position: relative;
+
+  padding: 30px 24px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease,
+    border-color 0.35s ease;
+
+  overflow: hidden;
+}
+
+.reason-card-1,
+.reason-card-2,
+.reason-card-3 {
+  grid-column: span 2;
+}
+
+.reason-card-4 {
+  grid-column: 2 / span 2;
+}
+
+.reason-card-5 {
+  grid-column: 4 / span 2;
+}
+
+.reason-card:hover {
+  transform: translateY(-7px);
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.reason-number {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 1px;
+}
+
+.reason-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(58, 175, 169, 0.22);
+
+  border: 1px solid rgba(222, 242, 241, 0.15);
+
+  border-radius: 16px;
+
+  font-size: 1.4rem;
+
+  margin-bottom: 20px;
+}
+
+.reason-card h3 {
+  font-size: 1.15rem;
+  font-weight: 750;
+
+  margin-bottom: 10px;
+
+  color: #FFFFFF;
+}
+
+.reason-card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+
+  margin: 0;
+
+  color: #DEF2F1;
+  opacity: 0.82;
+}
+
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media screen and (max-width: 1000px) {
+
+  .quality-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .scalable-production {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 55px 40px;
+  }
+
+  .scalable-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .complexity-tags {
+    justify-content: center;
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reason-card-1,
+  .reason-card-2,
+  .reason-card-3,
+  .reason-card-4,
+  .reason-card-5 {
+    grid-column: auto;
+  }
+
+  .reason-card-5 {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
 @media screen and (max-width: 768px) {
-  .promise-header h2 {
+
+  .team-quality-section {
+    padding: 70px 20px;
+  }
+
+  .team-quality-header {
+    margin-bottom: 50px;
+  }
+
+  .team-quality-header h2 {
     font-size: 2rem;
   }
-  .cost-hero-banner {
-    padding: 40px 25px;
+
+  .team-quality-intro {
+    font-size: 0.95rem;
   }
-  .cost-hero-banner h2 {
+
+
+  /* Quality */
+
+  .quality-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .quality-section-heading h3 {
+    font-size: 1.7rem;
+  }
+
+
+  /* Scalable */
+
+  .scalable-production {
+    padding: 45px 25px;
+    gap: 35px;
+  }
+
+  .scalable-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .scalable-content p {
+    font-size: 0.92rem;
+  }
+
+  .scalable-visual {
+    width: 200px;
+    height: 200px;
+  }
+
+  .orbit-one {
+    width: 160px;
+    height: 160px;
+  }
+
+  .orbit-two {
+    width: 115px;
+    height: 115px;
+  }
+
+
+  /* Why EmeSqube */
+
+  .why-emesqube-section {
+    padding: 0 20px 70px;
+  }
+
+  .why-emesqube-container {
+    padding: 55px 25px;
+    border-radius: 24px;
+  }
+
+  .why-header h2 {
     font-size: 2rem;
   }
-  .cost-lead {
-    font-size: 1.05rem;
+
+  .why-header p {
+    font-size: 0.92rem;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reason-card-1,
+  .reason-card-2,
+  .reason-card-3,
+  .reason-card-4,
+  .reason-card-5 {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media screen and (max-width: 480px) {
+
+  .team-quality-section {
+    padding: 55px 15px;
+  }
+
+  .why-emesqube-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .team-quality-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .quality-card {
+    padding: 23px 20px;
+  }
+
+  .quality-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+  }
+
+  .quality-card h4 {
+    font-size: 0.98rem;
+  }
+
+  .quality-card p {
+    font-size: 0.84rem;
+  }
+
+  .scalable-production {
+    padding: 40px 20px;
+  }
+
+  .scalable-content h3 {
+    font-size: 1.55rem;
+  }
+
+  .complexity-tags span {
+    font-size: 0.72rem;
+    padding: 7px 11px;
+  }
+
+  .why-emesqube-container {
+    padding: 45px 20px;
+  }
+
+  .why-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .reason-card {
+    padding: 25px 20px;
   }
 }

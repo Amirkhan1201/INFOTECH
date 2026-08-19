@@ -19,12 +19,25 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.footer-logo {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--primary);
+.footer-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
   margin-bottom: 15px;
-  letter-spacing: -0.5px;
+}
+
+.footer-logo-img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
 }
 
 .footer-bio {
@@ -76,11 +89,6 @@
   display: inline-block;
 }
 
-.footer-logo-img {
-  height: 60px;
-  width: auto;
-}
-
 .footer-links-col a:hover {
   opacity: 1;
   color: var(--primary);
@@ -125,5 +133,8 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
+  }
+  .footer-brand-title {
+    font-size: 1rem;
   }
 }

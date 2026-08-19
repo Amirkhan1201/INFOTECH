@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const servicesList = [
-  { name: 'App Development', icon: '📱', id: 'app-dev' },
-  { name: 'Web Development', icon: '💻', id: 'web-dev' },
+  { name: 'ePublishing & Digital Publishing', icon: '📚', id: 'epublishing-digital' },
+  { name: 'eBook Conversion', icon: '📖', id: 'ebook-conversion' },
+  { name: 'Editorial & Production Services', icon: '✍️', id: 'editorial-production' },
+  { name: 'Web & Technology Services', icon: '💻', id: 'web-technology' },
   { name: 'Digital Marketing', icon: '📈', id: 'digital-marketing' },
-  { name: 'ePublishing', icon: '📚', id: 'epublishing' },
-  { name: 'Digital Publishing', icon: '📰', id: 'digital-pub' },
-  { name: 'Type Setting', icon: '✍️', id: 'typesetting' },
-  { name: 'Translation & Localisation', icon: '🌍', id: 'translation' },
-  { name: 'Medical Coding & Transcription', icon: '🏥', id: 'medical' },
+  { name: 'Medical Content Services', icon: '🏥', id: 'medical-content' },
 ];
 
 export default function Navbar() {
@@ -28,10 +26,12 @@ export default function Navbar() {
     <nav className="site-navbar">
       <div className="navbar-container">
         
-        <div className="navbar-logo">
+        {/* Logo and Company Name together */}
+        <div className="navbar-brand">
           <Link to="/">
-    <img src="/logo.png" alt="M S Infotech" /> {/* CSS-la .navbar-logo img nu irukurathunala direct-ah work aagum */}
-  </Link>
+            <img src="/logo.png" alt="Emesqube Logo" className="brand-logo" />
+            <span className="brand-title">EMESQUBE TECHNOLOGIES</span>
+          </Link>
         </div>
 
         <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
@@ -47,7 +47,6 @@ export default function Navbar() {
           </li>
 
           {/* Our Services Mega Menu Dropdown */}
-          {/* Our Services Mega Menu Dropdown */}
           <li 
             className="dropdown-wrapper"
             onMouseEnter={() => window.innerWidth > 900 && setDropdownOpen(true)}
@@ -56,7 +55,6 @@ export default function Navbar() {
             <button 
               className="dropdown-toggle"
               onClick={() => {
-                // Mobile view-la iruntha mattum click-ku toggle aagum
                 if (window.innerWidth <= 900) {
                   setDropdownOpen(!dropdownOpen);
                 }

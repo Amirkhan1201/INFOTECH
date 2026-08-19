@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -11,15 +10,16 @@ export default function Footer() {
         <div className="footer-top-grid">
           
           <div className="footer-brand-col">
-            <Link to="/">
-    <img src="/logo.png" alt="MS Infotech" className="footer-logo-img" />
-  </Link>
+            <Link to="/" className="footer-brand-link">
+              <img src="/logo.png" alt="Emesqube Technologies" className="footer-logo-img" />
+              <span className="footer-brand-title">EMESQUBE TECHNOLOGIES</span>
+            </Link>
             <p className="footer-bio">
-              Delivering a gamut of professional publishing and next-gen technology solutions to clients worldwide with international quality standards.
+              EMESQUBE TECHNOLOGIES is a professional publishing and technology services company focused on digital content, ePublishing and document transformation solutions.
             </p>
             <div className="footer-contact-info">
-              <p>📍 No.23, VNP Nagar, Kollidam, Tamil Nadu, India.</p>
-              <p>✉️ <a href="mailto:msinfotech222@gmail.com">msinfotech222@gmail.com</a></p>
+              <p>📍 No.243 V.N.P. Nagar, Kollidam Main Road, Kollidam, Tamil Nadu, India – 609101.</p>
+              <p>✉️ <a href="mailto:emesqube@gmail.com">emesqube@gmail.com</a></p>
               <p>📞 <a href="tel:+919566500888">+91-9566500888</a></p>
             </div>
           </div>
@@ -34,25 +34,23 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services Links */}
+          {/* Core Services */}
           <div className="footer-links-col">
             <h3>Core Services</h3>
             <ul>
-              <li><Link to="/service/app-dev">App Development</Link></li>
-              <li><Link to="/service/web-dev">Web Development</Link></li>
-              <li><Link to="/service/digital-marketing">Digital Marketing</Link></li>
-              <li><Link to="/service/epublishing">ePublishing</Link></li>
-              <li><Link to="/service/typesetting">Type Setting</Link></li>
+              <li><Link to="/service/epublishing-digital">ePublishing & Digital</Link></li>
+              <li><Link to="/service/ebook-conversion">eBook Conversion</Link></li>
+              <li><Link to="/service/editorial-production">Editorial & Production</Link></li>
             </ul>
           </div>
 
-          {/* More Services */}
+          {/* Specialized Solutions */}
           <div className="footer-links-col">
             <h3>Specialized Solutions</h3>
             <ul>
-              <li><Link to="/service/digital-pub">Digital Publishing</Link></li>
-              <li><Link to="/service/translation">Translation & Localisation</Link></li>
-              <li><Link to="/service/medical">Medical Coding & Transcription</Link></li>
+              <li><Link to="/service/web-technology">Web & Technology</Link></li>
+              <li><Link to="/service/digital-marketing">Digital Marketing</Link></li>
+              <li><Link to="/service/medical-content">Medical Content</Link></li>
             </ul>
           </div>
 
@@ -60,7 +58,7 @@ export default function Footer() {
 
         {/* Bottom Section: Copyright */}
         <div className="footer-bottom-bar">
-          <p>&copy; {new Date().getFullYear()} M S Infotech. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Emesqube Technologies. All rights reserved.</p>
           <div className="footer-policy-links">
             <Link to="/contact">Privacy Policy</Link>
             <Link to="/contact">Terms of Service</Link>

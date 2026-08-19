@@ -1,11 +1,24 @@
-
 import './StatsSection.css';
 
-const statsData = [
-  { number: '17+', label: 'Years of Excellence', icon: '🏆', desc: 'Established since 2009 delivering global solutions' },
-  { number: '100%', label: 'Quality Standards', icon: '⭐', desc: 'Processes on a par with international benchmarks' },
-  { number: '24/7', label: 'Client Support', icon: '🌐', desc: 'Seamless communication across global time zones' },
-  { number: '500+', label: 'Projects Handled', icon: '🚀', desc: 'Innovative content and publishing workflows' }
+const visionMissionData = [
+  {
+    number: '01',
+    label: 'Our Vision',
+    icon: '🔭',
+    desc: 'To become a trusted global partner for digital publishing and technology-enabled content solutions by continuously improving quality, productivity and innovation.'
+  },
+  {
+    number: '02',
+    label: 'Our Mission',
+    icon: '🎯',
+    desc: 'To deliver reliable, accurate and cost-effective services that help publishers and businesses transform content into accessible digital formats while building long-term client relationships.'
+  },
+  {
+    number: '03',
+    label: 'Our Promise',
+    icon: '🤝',
+    desc: 'We are committed to customer satisfaction, consistent quality, timely delivery and continuous learning. Every project is handled with attention to requirements, workflow and output quality.'
+  }
 ];
 
 export default function StatsSection() {
@@ -14,13 +27,13 @@ export default function StatsSection() {
       <div className="stats-container">
         
         <div className="stats-header">
-          <span className="section-badge">OUR IMPACT IN NUMBERS</span>
-          <h2>Driven By Excellence & Technology</h2>
+          <span className="section-badge">VISION & MISSION</span>
+          <h2>Driven By Purpose & Core Values</h2>
           <p>Empowering global publishers with speed, accuracy, and unmatched digital workflows.</p>
         </div>
 
-        <div className="stats-grid">
-          {statsData.map((item, index) => (
+        <div className="stats-grid vm-grid">
+          {visionMissionData.map((item, index) => (
             <div key={index} className="stat-card">
               <div className="stat-glow"></div>
               <div className="stat-icon-wrapper">
